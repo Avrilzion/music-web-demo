@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Online Music Player</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<h1>Online Music Player</h1>
+		<div id="music-list">
+			<h2>Music List</h2>
+			<ul>
+				<li v-for="(song, index) in songs" :key="index" @click="playSong(index)">
+					{{ song }}
+				</li>
+			</ul>
+			<div id="upload">
+				<label for="file">Upload Music:</label>
+				<input type="file" id="file" name="file">
+				<button id="upload-btn">Upload</button>
+			</div>
+		</div>
+		<div id="music-player">
+			<h2>Now Playing:</h2>
+			<div id="player">
+				<button id="play-btn" @click="playPause">
+					{{ isPlaying ? 'Pause' : 'Play' }}
+				</button>
+				<button id="stop-btn" @click="stop">
+					Stop
+				</button>
+				<div id="volume">
+					<label for="volume-range">Volume:</label>
+					<input type="range" id="volume-range" min="0" max="1" step="0.01" v-model="volume">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+#music-list {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	cursor: pointer;
+	padding: 5px;
+}
+
+li:hover {
+	background-color: #f5f5f5;
+}
+
+#upload {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+#upload label {
+	margin-right: 10px;
+}
+
+#upload-btn {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#upload-btn:hover {
+	background-color: #3e8e41;
+}
+
+#music-player {
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+#player {
+	display: flex;
+	align-items: center;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	padding: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#volume {
+	display
+    : flex;
+    align-items: center;
+    }
+    
+    #volume-range {
+    width: 100%;
+    margin-left: 10px;
+    }
